@@ -28,7 +28,7 @@ df_titanic<- read.csv('https://web.stanford.edu/class/archive/cs/cs109/cs109.116
 
 ```
 
-   
+    
 
 ### Matematyczna interpretacja modelu
 
