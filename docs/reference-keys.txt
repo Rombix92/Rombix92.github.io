@@ -1,0 +1,6 @@
+tab:unnamed-chunk-2
+logistic-regression
+matematyczna-interpretacja-modelu
+graficzna-interpretacja-modelu
+eda
+missing-data
