@@ -27,7 +27,7 @@ df_titanic<- read.csv('https://web.stanford.edu/class/archive/cs/cs109/cs109.116
   mutate(Fare_log=round(log(Fare+0.001)))
 
 ```
-
+ 
      
 
 ### Matematyczna interpretacja modelu
