@@ -4,7 +4,7 @@ author: "Lukasz Rabalski"
 date: "2021-01-17"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib]
+#bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 #github-repo: seankross/bookdown-start

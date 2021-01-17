@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Ksiega Lukasza</title>
+  <title>Chapter 1 Data Grapling | Ksiega Lukasza</title>
   <meta name="description" content="Everything you need (and nothing more) to start a bookdown book." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Ksiega Lukasza" />
+  <meta property="og:title" content="Chapter 1 Data Grapling | Ksiega Lukasza" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ksiega Lukasza" />
+  <meta name="twitter:title" content="Chapter 1 Data Grapling | Ksiega Lukasza" />
   
   <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="data-grapling.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="statistics.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -164,23 +164,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Ksiega Lukasza</h1>
-<p class="author"><em>Lukasz Rabalski</em></p>
-<p class="date"><em>2021-01-17</em></p>
+<div id="data-grapling" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Data Grapling</h1>
+<div id="eda" class="section level2">
+<h2><span class="header-section-number">1.1</span> EDA</h2>
+<p>1.Take a look at data
+2.Visualize Data
+3.Count basic statistics</p>
+<p>One quick technique for jump-starting EDA is to examine all of the pairwise scatterplots in your data. This can be achieved using the pairs() function. Look for variables in the nyc data set that are strongly correlated, as those relationships will help us check for multicollinearity later on.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">df_it_restaurants &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;https://assets.datacamp.com/production/repositories/845/datasets/639a7a3f9020edb51bcbc4bfdb7b71cbd8b9a70e/nyc.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">pairs</span>(df_it_restaurants <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>Restaurant))</a></code></pre></div>
+<p><img src="1_Data_Grapling_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is the very first part of the book.</p>
+<div id="missing-data" class="section level2">
+<h2><span class="header-section-number">1.2</span> Missing Data</h2>
+<p>NA = Not Available
+NaN = Not a Number</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(<span class="st">&#39;datasets&#39;</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2"></a>
+<a class="sourceLine" id="cb2-3" title="3">df_airquality &lt;-<span class="st"> </span>airquality</a>
+<a class="sourceLine" id="cb2-4" title="4"></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="ot">NA</span><span class="op">|</span><span class="ot">TRUE</span></a></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="ot">NA</span><span class="op">|</span><span class="ot">FALSE</span></a></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="ot">NA</span><span class="op">+</span><span class="ot">NaN</span></a></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="ot">NaN</span><span class="op">+</span><span class="ot">NA</span></a></code></pre></div>
+<pre><code>## [1] NaN</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">library</span>(naniar)</a></code></pre></div>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="data-grapling.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

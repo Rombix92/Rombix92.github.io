@@ -1,12 +1,12 @@
-
-## Logistic Regression {.tabset}
+# Statistics
+## Logistic Regression 
 *[Markdown Tutorial](https://bookdown.org/yihui/rmarkdown/html-document.html)*
 
 
 
 
-
-
+ 
+     
 
 ### Matematyczna interpretacja modelu
 
@@ -104,7 +104,7 @@ Possible Answers
 Correct answers on the top of the page
 
 ### Graficzna interpretacja modelu
-<img src="1_modeling_ksiega_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
+<img src="2_Statistics_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
 
 ![](graph\\log_odds.jpg){#id .class width=50% height=50%}
 
@@ -136,64 +136,4 @@ augment(model, newdata = DiCaprio, type.predict = 'response')
 ##   Fare_log .fitted
 ##      <dbl>   <dbl>
 ## 1        1   0.156
-```
-## EDA {.tabset}
-1.Take a look at data
-2.Visualize Data
-3.Count basic statistics
-
-
-One quick technique for jump-starting EDA is to examine all of the pairwise scatterplots in your data. This can be achieved using the pairs() function. Look for variables in the nyc data set that are strongly correlated, as those relationships will help us check for multicollinearity later on. 
-
-```r
-df_it_restaurants <- read.csv('https://assets.datacamp.com/production/repositories/845/datasets/639a7a3f9020edb51bcbc4bfdb7b71cbd8b9a70e/nyc.csv')
-pairs(df_it_restaurants %>% select(-Restaurant))
-```
-
-<img src="1_modeling_ksiega_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto auto auto 0;" />
-
-## Missing Data {.tabset}
-
-NA = Not Available
-NaN = Not a Number
-
-
-```r
-library('datasets')
-
-df_airquality <- airquality
-
-NA|TRUE
-```
-
-```
-## [1] TRUE
-```
-
-```r
-NA|FALSE
-```
-
-```
-## [1] NA
-```
-
-```r
-NA+NaN
-```
-
-```
-## [1] NA
-```
-
-```r
-NaN+NA
-```
-
-```
-## [1] NaN
-```
-
-```r
-library(naniar)
 ```

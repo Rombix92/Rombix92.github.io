@@ -14,4 +14,5 @@ description: "Everything you need (and nothing more) to start a bookdown book."
 
 # Preface {-}
 
-This is the very first part of the book.
+Inspiration:
+http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html
